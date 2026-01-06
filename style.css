@@ -1,0 +1,67 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#card-container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.cat-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.liked {
+  transform: translateX(300px) rotate(15deg);
+  opacity: 0;
+}
+
+.disliked {
+  transform: translateX(-300px) rotate(-15deg);
+  opacity: 0;
+}
+
+/* Swipe overlays */
+.overlay {
+  position: absolute;
+  top: 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+.like {
+  left: 20px;
+  color: green;
+  border: 3px solid green;
+}
+
+.nope {
+  right: 20px;
+  color: red;
+  border: 3px solid red;
+}
+
+.show-like .like {
+  opacity: 1;
+}
+
+.show-nope .nope {
+  opacity: 1;
+}
+
+/* Summary images */
+#likedCats img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
